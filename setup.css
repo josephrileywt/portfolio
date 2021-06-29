@@ -1,0 +1,196 @@
+@media screen and (max-width:500px){
+    .PhotoProjects{
+        grid-template-columns: repeat(1,1fr);}
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;}
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;}
+    }
+@media screen and (min-width: 750px) {
+    .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;}
+    .menu li {
+        float: none;}
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        text-align: center;}
+}
+
+@keyframes move-down{
+
+    0%{
+        top:10%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:50%;
+    }
+}  
+.touch {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;}
+/*grid */
+body{
+    padding:0;
+    text-align:center;
+    background-color: #24022E;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+.PhotoProjects{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows:100px 300px;
+    grid-gap:10px;
+    grid-auto-flow: dense;
+    margin: 1em;}
+.projectfolder{
+    width:100%;
+    height:100%;
+    position:relative;}
+.projectfolder .image{
+    width:100%;
+    height:100%;
+    overflow:hidden;}
+.projectfolder .image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:50% 50%;
+    cursor:pointer;
+    transition:.5s ease-in-out;}
+.projectfolder:hover .image img{
+    transform:scale(1.5);}
+.projectfolder .text{
+    opacity:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#868487;
+    font-size:25px;
+    pointer-events:none;
+    z-index:4;
+    transition: .3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);}
+.projectfolder:hover .text{
+    opacity:1;
+    animation: move-down .3s linear;
+    padding:1em;
+    width:100%;}
+.gallery {
+    background-color: #432F4A;
+    color: #868487;
+    padding-bottom: 1em;
+    margin-bottom: 0em;
+    margin-top: 0em;}
+.indy {
+    background-color: #514655;
+    color: #868487;}
+.about {
+    background-color: #36193F;
+    color: #868487;
+    padding-bottom: 1em;
+    margin-bottom: 0em;
+    margin-top: 0em;}
+.strip{
+    display: inline-block;
+    white-space:nowrap; 
+    overflow-x: scroll;
+    width:100%;
+    height: auto;
+    margin: auto;}
+.strip img{
+    max-width: 400px;
+    max-height: 400px;}
+.alone img {
+    width: 300px;
+    max-width: 100%;}
+.w-1{
+    grid-column: span 1;}
+.w-2{
+    grid-column: span 2;}
+.w-3{
+    grid-column: span 3;}
+.w-4{
+    grid-column: span 4;}
+.w-5{
+    grid-column: span 5;}
+.w-6{
+    grid-column: span 6;}
+.h-1{
+    grid-row: span 1;}
+.h-2{
+    grid-row: span 2;}
+.h-3{
+    grid-row: span 3;}
+.h-4{
+    grid-row: span 4;}
+.h-5{
+    grid-row: span 5;}
+.h-6{
+    grid-row: span 6;}
+.link{
+    display:flex;  
+    list-style:none;}
+footer{
+    background-color: #5E5C60;
+    padding-bottom: 1em;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    color: #280233;}
+.bigone {
+    height: 500px;
+    width: 100%;
+    background-image: url("miscimage/Untitled-1.png");
+    background-position: center;
+    background-repeat: no-repeat;}
+header {
+    background: #280233;
+    padding-bottom: 1em;
+    margin-bottom: 0em;
+    margin-top: 0em;}
+.sep{
+    border-bottom: 1px solid #868487;
+    padding: 10px 0;}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;}    
+.menu li {
+    float: left;}     
+.menu li a {
+    display: block;
+    color: #868487;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;}     
+* {
+    box-sizing: border-box;}
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 100px;}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;}
+.column a {
+    text-decoration: none;
+    color: #868487;
+}
+p {
+    font-size: 16pt;
+}
